@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="title">Página de presentación</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="bg-primary text-white p-3 d-flex justify-content-between align-items-center">
+    <h1 data-i18n="headerName">Elena Guardia</h1>
+    <select id="language-selector" class="form-select w-auto">
+      <option value="es">Español</option>
+      <option value="en">English</option>
+      <option value="gl">Galego</option>
+    </select>
+  </header>
+
+  <main class="container my-5">
+    <section id="intro" class="mb-5">
+      <h2 data-i18n="welcomeTitle">Bienvenida</h2>
+      <p data-i18n="welcomeText">
+        Soy desarrolladora web freelance. Creo páginas profesionales,
+        responsivas y adaptadas a tus necesidades.
+      </p>
+    </section>
+
+    <section id="services" class="mb-5">
+      <h2 data-i18n="servicesTitle">Servicios</h2>
+      <ul>
+        <li data-i18n="service1">Landing pages para negocios</li>
+        <li data-i18n="service2">Portfolios personales</li>
+        <li data-i18n="service3">Webs multilingües</li>
+        <li data-i18n="service4">Formularios de contacto</li>
+      </ul>
+      <p><strong data-i18n="startingAt">Tarifas desde 150 €</strong></p>
+    </section>
+
+    <section id="portfolio" class="mb-5">
+      <h2 data-i18n="portfolioTitle">Portfolio</h2>
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 shadow-sm">
+            <img src="https://via.placeholder.com/300x180" alt="Proyecto Cafetería" class="card-img-top" />
+            <div class="card-body">
+              <h5 class="card-title" data-i18n="proj1Title">Web Cafetería</h5>
+              <p class="card-text" data-i18n="proj1Desc">
+                Landing page responsive con Bootstrap y multilenguaje.
+              </p>
+              <a href="https://github.com/ElenaLGM7/web-cafeteria" target="_blank" class="btn btn-primary" data-i18n="viewCode">
+                Ver código
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 shadow-sm">
+            <img src="https://via.placeholder.com/300x180" alt="Proyecto Portfolio" class="card-img-top" />
+            <div class="card-body">
+              <h5 class="card-title" data-i18n="proj2Title">Portfolio Personal</h5>
+              <p class="card-text" data-i18n="proj2Desc">
+                Web para mostrar mis proyectos y experiencia.
+              </p>
+              <a href="https://github.com/ElenaLGM7/portfolio-personal" target="_blank" class="btn btn-primary" data-i18n="viewCode">
+                Ver código
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 shadow-sm">
+            <img src="https://via.placeholder.com/300x180" alt="Proyecto Tienda Online" class="card-img-top" />
+            <div class="card-body">
+              <h5 class="card-title" data-i18n="proj3Title">Tienda Online</h5>
+              <p class="card-text" data-i18n="proj3Desc">
+                Diseño responsive y carrito básico con JavaScript.
+              </p>
+              <a href="https://github.com/ElenaLGM7/tienda-online" target="_blank" class="btn btn-primary" data-i18n="viewCode">
+                Ver código
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="mb-5">
+      <h2 data-i18n="contactTitle">Contacto</h2>
+      <form id="contact-form">
+        <div class="mb-3">
+          <label for="name" class="form-label" data-i18n="labelName">Nombre</label>
+          <input type="text" class="form-control" id="name" required />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label" data-i18n="labelEmail">Correo electrónico</label>
+          <input type="email" class="form-control" id="email" required />
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label" data-i18n="labelMessage">Mensaje</label>
+          <textarea class="form-control" id="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" data-i18n="sendMessage">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="bg-light text-center p-3">
+    <small>© 2025 Elena Guardia - <a href="https://github.com/ElenaLGM7" target="_blank">GitHub</a></small>
+  </footer>
+
+  <script src="script.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
+</body>
+</html>
