@@ -7,16 +7,19 @@
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     rel="stylesheet"
-  </head>
+  />
   <link rel="stylesheet" href="style.css" />
-<header class="bg-primary text-white p-3 d-flex justify-content-between align-items-center">
-  <h1 data-i18n="headerName">Elena Guardia</h1>
-  <select id="language-selector" class="form-select w-auto">
-    <option value="es">Español</option>
-    <option value="en">English</option>
-    <option value="gl">Galego</option>
-  </select>
-</header>
+</head>
+<body>
+  <header class="bg-primary text-white p-3 d-flex justify-content-between align-items-center">
+    <h1 data-i18n="headerName">Elena Guardia</h1>
+    <select id="language-selector" class="form-select w-auto">
+      <option value="es">Español</option>
+      <option value="en">English</option>
+      <option value="gl">Galego</option>
+    </select>
+  </header>
+
   <main class="container my-5">
     <section id="intro" class="mb-5">
       <h2 data-i18n="welcomeTitle">Bienvenida</h2>
@@ -25,6 +28,7 @@
         responsivas y adaptadas a tus necesidades.
       </p>
     </section>
+
     <section id="services" class="mb-5">
       <h2 data-i18n="servicesTitle">Servicios</h2>
       <ul>
@@ -35,45 +39,47 @@
       </ul>
       <p><strong data-i18n="startingAt">Tarifas desde 150 €</strong></p>
     </section>
+
     <section id="portfolio" class="mb-5">
       <section id="tarifas" class="py-5">
-  <div class="container">
-    <h2 class="mb-4" data-i18n="pricingTitle">Tarifas orientativas</h2>
-    <div class="table-responsive">
-      <table class="table table-bordered table-hover text-center align-middle">
-        <thead class="table-primary">
-          <tr>
-            <th data-i18n="projectType">Tipo de proyecto</th>
-            <th data-i18n="description">Descripción</th>
-            <th data-i18n="price">Precio desde</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-i18n="basicPage">Página básica</td>
-            <td data-i18n="basicDesc">1 sección estática (tipo presentación o carta digital)</td>
-            <td>150 €</td>
-          </tr>
-          <tr>
-            <td data-i18n="mediumPage">Página intermedia</td>
-            <td data-i18n="mediumDesc">3 secciones, portfolio o formulario de contacto</td>
-            <td>200–250 €</td>
-          </tr>
-          <tr>
-            <td data-i18n="advancedPage">Página avanzada</td>
-            <td data-i18n="advancedDesc">Web multilenguaje, animaciones y diseño responsive</td>
-            <td>300–400 €</td>
-          </tr>
-          <tr>
-            <td data-i18n="customProject">Proyecto personalizado</td>
-            <td data-i18n="customDesc">Incluye tiendas online, bases de datos o funcionalidades complejas</td>
-            <td data-i18n="ask">Consultar</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
+        <div class="container">
+          <h2 class="mb-4" data-i18n="pricingTitle">Tarifas orientativas</h2>
+          <div class="table-responsive">
+            <table class="table table-bordered table-hover text-center align-middle">
+              <thead class="table-primary">
+                <tr>
+                  <th data-i18n="projectType">Tipo de proyecto</th>
+                  <th data-i18n="description">Descripción</th>
+                  <th data-i18n="price">Precio desde</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-i18n="basicPage">Página básica</td>
+                  <td data-i18n="basicDesc">1 sección estática (tipo presentación o carta digital)</td>
+                  <td>150 €</td>
+                </tr>
+                <tr>
+                  <td data-i18n="mediumPage">Página intermedia</td>
+                  <td data-i18n="mediumDesc">3 secciones, portfolio o formulario de contacto</td>
+                  <td>200–250 €</td>
+                </tr>
+                <tr>
+                  <td data-i18n="advancedPage">Página avanzada</td>
+                  <td data-i18n="advancedDesc">Web multilenguaje, animaciones y diseño responsive</td>
+                  <td>300–400 €</td>
+                </tr>
+                <tr>
+                  <td data-i18n="customProject">Proyecto personalizado</td>
+                  <td data-i18n="customDesc">Incluye tiendas online, bases de datos o funcionalidades complejas</td>
+                  <td data-i18n="ask">Consultar</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       <h2 data-i18n="portfolioTitle">Portfolio</h2>
       <div class="row">
         <div class="col-md-4 mb-3">
@@ -90,6 +96,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-md-4 mb-3">
           <div class="card h-100 shadow-sm">
             <img src="https://via.placeholder.com/300x180" alt="Proyecto Portfolio" class="card-img-top" />
@@ -104,6 +111,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-md-4 mb-3">
           <div class="card h-100 shadow-sm">
             <img src="https://via.placeholder.com/300x180" alt="Proyecto Tienda Online" class="card-img-top" />
@@ -120,6 +128,7 @@
         </div>
       </div>
     </section>
+
     <section id="contact" class="mb-5">
       <h2 data-i18n="contactTitle">Contacto</h2>
       <form id="contact-form">
@@ -139,12 +148,15 @@
       </form>
     </section>
   </main>
+
   <footer class="bg-light text-center p-3">
     <small>© 2025 Elena Guardia - <a href="https://github.com/ElenaLGM7" target="_blank">GitHub</a></small>
   </footer>
+
   <script src="script.js"></script>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
   ></script>
 </body>
 </html>
+
