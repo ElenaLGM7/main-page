@@ -14,7 +14,7 @@
   
   <header class="bg-primary text-white p-3 d-flex justify-content-between align-items-center">
     <h1 data-i18n="headerName">Elena Guardia</h1>
-    <select id="language-selector" class="form-select w-auto">
+    <select id="language-selector" class="form-select w-auto" aria-label="Selector de idioma">
       <option value="es">Español</option>
       <option value="en">English</option>
       <option value="gl">Galego</option>
@@ -41,58 +41,56 @@
       <p><strong data-i18n="startingAt">Tarifas desde 150 €</strong></p>
     </section>
 
-    <section id="portfolio" class="mb-5">
-      <section id="tarifas" class="py-5">
-        <div class="container">
-          <h2 class="mb-4" data-i18n="pricingTitle">Tarifas orientativas</h2>
-          <div class="table-responsive">
-            <table class="table table-bordered table-hover text-center align-middle">
-              <thead class="table-primary">
-                <tr>
-                  <th data-i18n="projectType">Tipo de proyecto</th>
-                  <th data-i18n="description">Descripción</th>
-                  <th data-i18n="price">Precio desde</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td data-i18n="basicPage">Página básica</td>
-                  <td data-i18n="basicDesc">1 sección estática (tipo presentación o carta digital)</td>
-                  <td>150 €</td>
-                </tr>
-                <tr>
-                  <td data-i18n="mediumPage">Página intermedia</td>
-                  <td data-i18n="mediumDesc">3 secciones, portfolio o formulario de contacto</td>
-                  <td>200–250 €</td>
-                </tr>
-                <tr>
-                  <td data-i18n="advancedPage">Página avanzada</td>
-                  <td data-i18n="advancedDesc">Web multilenguaje, animaciones y diseño responsive</td>
-                  <td>300–400 €</td>
-                </tr>
-                <tr>
-                  <td data-i18n="customProject">Proyecto personalizado</td>
-                  <td data-i18n="customDesc">Incluye tiendas online, bases de datos o funcionalidades complejas</td>
-                  <td data-i18n="ask">Consultar</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
+    <section id="tarifas" class="py-5 mb-5">
+      <h2 data-i18n="pricingTitle" class="mb-4">Tarifas orientativas</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover text-center align-middle">
+          <thead class="table-primary">
+            <tr>
+              <th data-i18n="projectType">Tipo de proyecto</th>
+              <th data-i18n="description">Descripción</th>
+              <th data-i18n="price">Precio desde</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="basicPage">Página básica</td>
+              <td data-i18n="basicDesc">1 sección estática (tipo presentación o carta digital)</td>
+              <td>150 €</td>
+            </tr>
+            <tr>
+              <td data-i18n="mediumPage">Página intermedia</td>
+              <td data-i18n="mediumDesc">3 secciones, portfolio o formulario de contacto</td>
+              <td>200–250 €</td>
+            </tr>
+            <tr>
+              <td data-i18n="advancedPage">Página avanzada</td>
+              <td data-i18n="advancedDesc">Web multilenguaje, animaciones y diseño responsive</td>
+              <td>300–400 €</td>
+            </tr>
+            <tr>
+              <td data-i18n="customProject">Proyecto personalizado</td>
+              <td data-i18n="customDesc">Incluye tiendas online, bases de datos o funcionalidades complejas</td>
+              <td data-i18n="ask">Consultar</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
+    <section id="portfolio" class="mb-5">
       <h2 data-i18n="portfolioTitle">Portfolio</h2>
       <div class="row">
         <div class="col-md-4 mb-3">
           <div class="card h-100 shadow-sm">
-            <img src="coffee.jpg" alt="Proyecto Cafetería" class="card-img-top" />
+            <img src="coffee.jpg" alt="Proyecto de página web para cafetería" class="card-img-top" />
             <div class="card-body">
               <h5 class="card-title" data-i18n="proj1Title">Web Cafetería</h5>
               <p class="card-text" data-i18n="proj1Desc">
                 Landing page responsive con Bootstrap y multilenguaje.
               </p>
-              <a href="https://github.com/ElenaLGM7/web-cafeteria" target="_blank" class="btn btn-primary" data-i18n="viewCode">
-                Ver código
+              <a href="https://elenalgm7.github.io/cafeteria-landing-page/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="viewPage">
+                Ver página
               </a>
             </div>
           </div>
@@ -106,8 +104,8 @@
               <p class="card-text" data-i18n="proj2Desc">
                 Web para mostrar mis proyectos y experiencia.
               </p>
-              <a href="https://github.com/ElenaLGM7/portfolio-personal" target="_blank" class="btn btn-primary" data-i18n="viewCode">
-                Ver código
+              <a href="https://elenalgm7.github.io/main-page/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="viewPage">
+                Ver página
               </a>
             </div>
           </div>
@@ -121,8 +119,8 @@
               <p class="card-text" data-i18n="proj3Desc">
                 Diseño responsive y carrito básico con JavaScript.
               </p>
-              <a href="https://github.com/ElenaLGM7/tienda-online" target="_blank" class="btn btn-primary" data-i18n="viewCode">
-                Ver código
+              <a href="https://elenalgm7.github.io/tienda-online/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="viewPage">
+                Ver página
               </a>
             </div>
           </div>
@@ -132,18 +130,18 @@
 
     <section id="contact" class="mb-5">
       <h2 data-i18n="contactTitle">Contacto</h2>
-      <form id="contact-form">
+      <form id="contact-form" novalidate>
         <div class="mb-3">
           <label for="name" class="form-label" data-i18n="labelName">Nombre</label>
-          <input type="text" class="form-control" id="name" required />
+          <input type="text" class="form-control" id="name" required aria-required="true" />
         </div>
         <div class="mb-3">
           <label for="email" class="form-label" data-i18n="labelEmail">Correo electrónico</label>
-          <input type="email" class="form-control" id="email" required />
+          <input type="email" class="form-control" id="email" required aria-required="true" />
         </div>
         <div class="mb-3">
           <label for="message" class="form-label" data-i18n="labelMessage">Mensaje</label>
-          <textarea class="form-control" id="message" rows="4" required></textarea>
+          <textarea class="form-control" id="message" rows="4" required aria-required="true"></textarea>
         </div>
         <button type="submit" class="btn btn-primary" data-i18n="sendMessage">Enviar mensaje</button>
       </form>
@@ -151,7 +149,7 @@
   </main>
 
   <footer class="bg-light text-center p-3">
-    <small>© 2025 Elena Guardia - <a href="https://github.com/ElenaLGM7" target="_blank">GitHub</a></small>
+    <small>© 2025 Elena Guardia - <a href="https://github.com/ElenaLGM7" target="_blank" rel="noopener noreferrer">GitHub</a></small>
   </footer>
 
   <script src="script.js"></script>
@@ -160,5 +158,4 @@
   ></script>
 </body>
 </html>
-
 
