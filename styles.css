@@ -42,3 +42,51 @@ footer a:hover {
   }
 }
 
+/* Gradiente cálido para tarjetas de servicios */
+.service-card {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* naranja a melocotón */
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(255, 126, 95, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(255, 126, 95, 0.5);
+}
+
+/* Gradiente cálido para tarjetas de tarifas */
+.tarifa-card {
+  background: linear-gradient(135deg, #f7971e, #ffd200); /* amarillo dorado */
+  color: #333;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(247, 151, 30, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarifa-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(247, 151, 30, 0.5);
+}
+
+/* Precio destacado */
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+/* Asegurar que los títulos y textos de servicios sean blancos para buen contraste */
+#services h3,
+#services p {
+  color: #fff;
+}
+
+/* Asegurar textos oscuros legibles en tarifas */
+#tarifas h3,
+#tarifas p {
+  color: #333;
+}
