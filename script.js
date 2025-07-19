@@ -46,14 +46,25 @@ const translations = {
   }
 };
 
-document.querySelectorAll(".lang-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const lang = btn.getAttribute("data-lang");
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-      const key = el.getAttribute("data-i18n");
-      if (translations[lang][key]) {
-        el.innerHTML = translations[lang][key];
-      }
-    });
+const langButtons = document.querySelectorAll(".lang-btn");
+
+function setLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang] && translations[lang][key]) {
+      el.innerHTML = translations[lang][key];
+    }
   });
+  langButtons.forEach(btn => btn.classList.toggle("active", btn.getAttribute("data-lang") === lang));
+}
+
+langButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    setLanguage(btn.getAttribute("data-lang"));
+  });
+});
+
+// Set default language on load
+document.addEventListener("DOMContentLoaded", () => {
+  setLanguage("es");
 });
