@@ -1,53 +1,48 @@
 body {
   margin: 0;
-  padding: 0;
-  font-family: 'Inter', sans-serif;
-  min-height: 100vh;
-  overflow-x: hidden;
-  position: relative;
-  background: linear-gradient(to bottom, #ff8a00, #e52e71);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+  background-attachment: fixed;
+  background-size: cover;
   color: #fff;
-}
-
-/* Fondo decorativo con diamantes */
-.background-overlay::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    linear-gradient(45deg, rgba(255, 255, 255, 0.07) 25%, transparent 25%),
-    linear-gradient(-45deg, rgba(255, 255, 255, 0.07) 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.07) 75%),
-    linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.07) 75%);
-  background-size: 40px 40px;
-  z-index: 0;
-}
-
-header,
-main,
-footer {
-  position: relative;
-  z-index: 1;
 }
 
 header {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #000;
+  padding: 3rem 1rem;
 }
 
-h1, h2, h4, h5 {
-  color: #fff;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
-p {
-  color: #f8f9fa;
+h2 {
+  margin-top: 2rem;
+  color: #000;
 }
 
-.card {
-  background: rgba(0,0,0,0.6);
-  border-radius: 1rem;
+p, ul {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+main {
+  background: rgba(255, 255, 255, 0.75);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  backdrop-filter: blur(5px);
+}
+
+footer {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.5);
 }
