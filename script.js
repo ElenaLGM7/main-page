@@ -46,27 +46,14 @@ const translations = {
   }
 };
 
-function translatePage(lang) {
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.getAttribute("data-i18n");
-    if (translations[lang] && translations[lang][key]) {
-      el.innerHTML = translations[lang][key];
-    }
-  });
-  document.documentElement.lang = lang;
-  // Opcional: actualizar título de la pestaña
-  if (translations[lang] && translations[lang].title) {
-    document.title = translations[lang].title + " · Elena Guardia";
-  }
-}
-
-// Detectar clicks en botones de idioma
 document.querySelectorAll(".lang-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     const lang = btn.getAttribute("data-lang");
-    translatePage(lang);
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (translations[lang][key]) {
+        el.innerHTML = translations[lang][key];
+      }
+    });
   });
 });
-
-// Traducción inicial al español
-translatePage("es");
