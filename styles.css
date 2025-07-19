@@ -4,36 +4,73 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #212529;
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #444;
 }
 
 .bg-gradient {
   background: linear-gradient(135deg, #f77f00, #d62828);
   color: white;
+  box-shadow: 0 4px 8px rgb(214 73 44 / 0.5);
 }
 
-h1, h2 {
-  font-weight: 700;
+button.lang-btn {
+  margin: 0 0.3rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 600;
 }
 
-ul {
-  padding-left: 1.2rem;
+button.lang-btn:hover {
+  background-color: rgba(255 255 255 / 0.3);
 }
 
-footer a {
+footer {
+  font-size: 0.9rem;
+  color: #555;
+  padding: 1rem 0;
+}
+
+a {
+  color: #d62828;
   text-decoration: none;
-  color: #0d6efd;
+  font-weight: 600;
 }
 
-footer a:hover {
+a:hover {
   text-decoration: underline;
 }
 
-.lang-btn {
-  margin: 0 0.2rem;
-}
-
+/* Responsive */
 @media (max-width: 576px) {
   main {
-    padding: 0 1rem;
+    padding: 1rem;
   }
 }
