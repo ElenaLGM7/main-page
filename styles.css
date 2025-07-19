@@ -1,4 +1,4 @@
-/* Fondo con textura sutil y fondo base */
+/* Fondo con patrón sutil */
 body {
   background-color: #f8f9fa;
   background-image: url("https://www.transparenttextures.com/patterns/white-diamond-dark.png");
@@ -9,7 +9,42 @@ body {
   padding: 0;
 }
 
-/* Titulares */
+/* Header con gradiente cálido y texto negro */
+header {
+  background: linear-gradient(135deg, #fcbf49, #f77f00, #d62828);
+  color: black;
+  box-shadow: 0 4px 8px rgb(214 73 44 / 0.3);
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+header h1 {
+  color: black;
+}
+
+header p.lead {
+  color: #3a3a3a;
+}
+
+/* Botones de idioma */
+button.lang-btn {
+  border: 1px solid #333;
+  color: #333;
+  background: transparent;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0 0.3rem;
+  cursor: pointer;
+}
+
+button.lang-btn:hover {
+  background-color: #f77f00;
+  color: white;
+}
+
+/* Títulos */
 h1, h2 {
   font-weight: 700;
   margin-bottom: 1rem;
@@ -33,30 +68,6 @@ p {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
   color: #444;
-}
-
-/* Header con fondo gradient y texto blanco */
-.bg-gradient {
-  background: linear-gradient(135deg, #f77f00, #d62828);
-  color: white;
-  box-shadow: 0 4px 8px rgba(214, 73, 44, 0.5);
-}
-
-/* Botones de cambio de idioma */
-button.lang-btn {
-  margin: 0 0.3rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border: 1px solid white;
-  background: transparent;
-  color: white;
-  padding: 0.25rem 0.6rem;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-button.lang-btn:hover {
-  background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Footer */
