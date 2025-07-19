@@ -46,14 +46,22 @@ const translations = {
   }
 };
 
+function translatePage(lang) {
+  document.documentElement.lang = lang;  // Cambia el lang del <html>
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang] && translations[lang][key]) {
+      el.innerHTML = translations[lang][key];
+    }
+  });
+}
+
 document.querySelectorAll(".lang-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     const lang = btn.getAttribute("data-lang");
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-      const key = el.getAttribute("data-i18n");
-      if (translations[lang][key]) {
-        el.innerHTML = translations[lang][key];
-      }
-    });
+    translatePage(lang);
   });
 });
+
+// Traducción inicial al cargar la página en español
+translatePage("es");
