@@ -1,147 +1,51 @@
-/* Reset y base */
-* {
-  box-sizing: border-box;
-}
-
+/* Reset y tipografía */
 body {
-  background-color: #f8f9fa;
-  background-image: url("https://www.transparenttextures.com/patterns/white-diamond-dark.png");
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #212529;
-  line-height: 1.6;
   margin: 0;
   padding: 0;
-
-  /* Gradiente vertical que afecta todo el fondo */
-  background: linear-gradient(to bottom, #f77f00 0%, #d62828 100%), url("https://www.transparenttextures.com/patterns/white-diamond-dark.png");
-  background-repeat: repeat;
-  background-blend-mode: overlay;
-  background-size: auto;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  background: linear-gradient(to bottom, #ff8a00, #e52e71);
+  color: #fff;
 }
 
-/* Animación fade-in para secciones */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease forwards;
+/* Fondo decorativo con diamantes */
+.background-overlay::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(45deg, rgba(255, 255, 255, 0.07) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255, 255, 255, 0.07) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.07) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.07) 75%);
+  background-size: 40px 40px;
+  z-index: 0;
 }
 
-.fade-in:nth-child(1) {
-  animation-delay: 0.2s;
-}
-
-.fade-in:nth-child(2) {
-  animation-delay: 0.4s;
-}
-
-.fade-in:nth-child(3) {
-  animation-delay: 0.6s;
-}
-
-.fade-in:nth-child(4) {
-  animation-delay: 0.8s;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-h1, h2 {
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: black; /* título en negro */
-}
-
+/* Asegurarse de que el contenido esté por encima del fondo */
+header,
 main {
-  max-width: 900px;
-  margin: auto;
-  padding: 2rem 1rem;
+  position: relative;
+  z-index: 1;
 }
 
-ul {
-  padding-left: 1.5rem;
-  margin-bottom: 2rem;
+/* Encabezado */
+header {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+/* Textos */
+h1 {
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-  color: #444;
-}
-
-.bg-gradient {
-  /* Ya no se usa en header porque el gradiente está en todo el body */
-}
-
-button.lang-btn {
-  margin: 0 0.3rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border: 1px solid white;
-  background: transparent;
-  color: white;
-  padding: 0.25rem 0.6rem;
-  border-radius: 4px;
-  font-weight: 600;
-  user-select: none;
-}
-
-button.lang-btn:hover {
-  background-color: rgba(255 255 255 / 0.3);
-}
-
-/* Indicador de botón activo */
-button.lang-btn.active {
-  background-color: white;
-  color: #d62828;
-  font-weight: 700;
-  border-color: #d62828;
-}
-
-footer {
-  font-size: 0.9rem;
-  color: #555;
-  padding: 1rem 0;
-  background: rgba(255 255 255 / 0.8);
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-  position: relative;
-  z-index: 10;
-}
-
-footer a {
-  color: #d62828;
-  text-decoration: none;
-  font-weight: 600;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: #f77f00;
-  text-decoration: underline;
-}
-
-/* Estilo iconos sociales */
-.social-links a svg {
-  vertical-align: middle;
-  transition: fill 0.3s ease;
-}
-
-.social-links a:hover svg {
-  fill: #f77f00;
-}
-
-/* Responsive */
-@media (max-width: 576px) {
-  main {
-    padding: 1rem;
-  }
-
-  button.lang-btn {
-    margin: 0 0.15rem;
-    padding: 0.2rem 0.5rem;
-  }
+  color: #f8f9fa;
 }
