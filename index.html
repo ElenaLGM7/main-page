@@ -1,60 +1,73 @@
-<section id="services" class="mb-5">
-  <h2 data-i18n="servicesTitle">Servicios profesionales</h2>
-  <div class="row g-4">
-    <div class="col-md-6 col-lg-3">
-      <div class="service-card p-4 rounded shadow-sm text-white">
-        <h3 data-i18n="service1Title">Landing pages para negocios</h3>
-        <p data-i18n="service1Desc">Diseño profesional para captar clientes y mejorar tu presencia online.</p>
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-3">
-      <div class="service-card p-4 rounded shadow-sm text-white">
-        <h3 data-i18n="service2Title">Portfolios personales</h3>
-        <p data-i18n="service2Desc">Muestra tus proyectos con estilo y claridad, adaptable a cualquier dispositivo.</p>
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-3">
-      <div class="service-card p-4 rounded shadow-sm text-white">
-        <h3 data-i18n="service3Title">Webs multilingües</h3>
-        <p data-i18n="service3Desc">Conecta con clientes internacionales con sitios web en varios idiomas.</p>
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-3">
-      <div class="service-card p-4 rounded shadow-sm text-white">
-        <h3 data-i18n="service4Title">Formularios de contacto</h3>
-        <p data-i18n="service4Desc">Facilita que tus visitantes se pongan en contacto contigo de manera sencilla.</p>
-      </div>
-    </div>
-  </div>
-  <p class="mt-3"><strong data-i18n="startingAt">Tarifas desde 150 €</strong></p>
-</section>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elena Guardia - Desarrolladora Web</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <select id="language">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+        <option value="gl">Galego</option>
+      </select>
+      <ul class="nav-links">
+        <li><a href="#home" data-i18n="home">Inicio</a></li>
+        <li><a href="#services" data-i18n="services">Servicios</a></li>
+        <li><a href="#pricing" data-i18n="pricing">Tarifas</a></li>
+        <li><a href="#contact" data-i18n="contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section id="tarifas" class="py-5 mb-5">
-  <h2 data-i18n="pricingTitle" class="mb-4">Tarifas orientativas</h2>
-  <div class="row g-4 justify-content-center">
-    <div class="col-md-4">
-      <div class="tarifa-card p-4 rounded shadow-sm">
-        <h3 data-i18n="basicTitle">Página básica</h3>
-        <p data-i18n="basicDesc">1 sección estática (tipo presentación o carta digital)</p>
-        <p class="price" data-i18n="basicPrice">Desde 150 €</p>
+  <main>
+    <section id="home" class="hero">
+      <h1 data-i18n="welcomeMessage">¡Hola! Soy Elena, desarrolladora web.</h1>
+    </section>
+
+    <section id="services" class="section">
+      <h2 data-i18n="serviceTitle">Servicios que ofrezco</h2>
+      <div class="card-container">
+        <div class="card">Landing pages modernas</div>
+        <div class="card">Páginas de presentación personal</div>
+        <div class="card">Webs para pequeños negocios</div>
       </div>
-    </div>
-    <div class="col-md-4">
-      <div class="tarifa-card p-4 rounded shadow-sm">
-        <h3 data-i18n="mediumTitle">Página intermedia</h3>
-        <p data-i18n="mediumDesc">3 secciones, portfolio o formulario de contacto</p>
-        <p class="price" data-i18n="mediumPrice">200–250 €</p>
+    </section>
+
+    <section id="pricing" class="section">
+      <h2 data-i18n="pricingTitle">Tarifas</h2>
+      <div class="card-container">
+        <div class="card">Desde 80€ por landing</div>
+        <div class="card">120€ por página completa</div>
+        <div class="card">Planes personalizados a consultar</div>
       </div>
-    </div>
-    <div class="col-md-4">
-      <div class="tarifa-card p-4 rounded shadow-sm">
-        <h3 data-i18n="advancedTitle">Página avanzada</h3>
-        <p data-i18n="advancedDesc">Web multilenguaje, animaciones y diseño responsive</p>
-        <p class="price" data-i18n="advancedPrice">300–400 €</p>
-      </div>
-    </div>
-  </div>
-  <p class="mt-4 text-center">
-    Proyecto personalizado: <strong data-i18n="customProject">Consultar</strong>
-  </p>
-</section>
+    </section>
+
+    <section id="contact" class="section">
+      <h2 data-i18n="contactTitle">Contacto</h2>
+      <form>
+        <label for="name" data-i18n="labelName">Nombre</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email" data-i18n="labelEmail">Correo electrónico</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message" data-i18n="labelMessage">Mensaje</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit" data-i18n="sendMessage">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Elena Guardia</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
