@@ -46,13 +46,13 @@ const translations = {
   }
 };
 
-document.querySelectorAll(".lang-btn").forEach(button => {
-  button.addEventListener("click", () => {
-    const lang = button.getAttribute("data-lang");
-    document.querySelectorAll("[data-i18n]").forEach(element => {
-      const key = element.getAttribute("data-i18n");
-      if (translations[lang] && translations[lang][key]) {
-        element.innerHTML = translations[lang][key];
+document.querySelectorAll(".lang-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const lang = btn.getAttribute("data-lang");
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (translations[lang][key]) {
+        el.innerHTML = translations[lang][key];
       }
     });
   });
