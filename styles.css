@@ -1,29 +1,22 @@
 body {
-  background: linear-gradient(to bottom right, #fff8f0, #fce3e1);
+  background-color: #f8f9fa;
+  background-image: url('https://www.transparenttextures.com/patterns/white-diamond-dark.png');
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #212529;
   line-height: 1.6;
-  background-attachment: fixed;
 }
 
-h1, h2, h3 {
+.bg-gradient {
+  background: linear-gradient(135deg, #f77f00, #d62828);
+  color: white;
+}
+
+h1, h2 {
   font-weight: 700;
 }
 
 ul {
   padding-left: 1.2rem;
-}
-
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #e2e6ea;
-  border-radius: 1rem;
-  background-color: #fff;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 footer a {
@@ -33,6 +26,10 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+.lang-btn {
+  margin: 0 0.2rem;
 }
 
 @media (max-width: 576px) {
