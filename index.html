@@ -4,7 +4,146 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Elena Guardia – Desarrolladora Web</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* 🌈 Fondo degradado vertical */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #1a1a40, #3c1f5b, #5a2d91);
+      color: #ffffff;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* 🧩 Diamantes animados */
+    .diamond {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      transform: rotate(45deg);
+      animation: float 15s infinite linear;
+      border-radius: 2px;
+    }
+
+    .diamond:nth-child(1) {
+      top: 10%;
+      left: 5%;
+      animation-delay: 0s;
+    }
+
+    .diamond:nth-child(2) {
+      top: 30%;
+      left: 20%;
+      animation-delay: 3s;
+    }
+
+    .diamond:nth-child(3) {
+      top: 60%;
+      left: 15%;
+      animation-delay: 6s;
+    }
+
+    .diamond:nth-child(4) {
+      top: 80%;
+      left: 40%;
+      animation-delay: 1s;
+    }
+
+    .diamond:nth-child(5) {
+      top: 50%;
+      left: 70%;
+      animation-delay: 5s;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 0.3;
+      }
+      50% {
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(45deg);
+        opacity: 0.1;
+      }
+    }
+
+    /* 📦 Contenedor principal */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 0.2rem;
+      color: #f5f5f5;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 2rem;
+      color: #ffd166;
+      text-shadow: 0 0 5px rgba(255,255,255,0.2);
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      margin-top: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: "• ";
+      color: #ffd166;
+    }
+
+    a {
+      color: #90e0ef;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: rgba(0,0,0,0.3);
+      color: #ccc;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      .card {
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -15,7 +154,7 @@
   <div class="diamond"></div>
   <div class="diamond"></div>
 
-  <!-- 🧭 Contenedor principal -->
+  <!-- 🧭 Contenido principal -->
   <div class="container">
     <header>
       <h1>Elena Guardia</h1>
