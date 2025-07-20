@@ -3,17 +3,13 @@ body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
-  /* Degradado cálido intenso: de naranja oscuro a melocotón claro */
-  background: linear-gradient(to bottom, #e65100, #f57c00, #ffb74d, #ffe0b2);
-
-  /* Patrón de diamantes encima del degradado */
-  background-image: 
-    url('white-diamond-dark.png'),
-    linear-gradient(to bottom, #e65100, #f57c00, #ffb74d, #ffe0b2);
+  background: linear-gradient(to bottom, #e65100, #f57c00, #ffb74d, #ffe0b2),
+              url('white-diamond-dark.png');
 
   background-repeat: repeat;
   background-size: 150px 150px;
   background-blend-mode: overlay;
+  background-attachment: fixed;
 
   color: #111;
   min-height: 100vh;
@@ -22,7 +18,7 @@ body {
 /* Encabezado */
 header {
   text-align: center;
-  padding: 3rem 1rem 1.5rem;
+  padding: 3rem 1rem 2rem;
   color: #fff;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
@@ -64,7 +60,7 @@ ul {
 }
 
 ul li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 
 /* Tabla de tarifas */
@@ -86,14 +82,20 @@ th {
   color: #333;
 }
 
-/* Enlaces */
-a {
-  color: #bf360c;
+/* Botón de contacto */
+.contact-btn {
+  display: inline-block;
+  background: #f67280;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
   text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
-a:hover {
-  text-decoration: underline;
+.contact-btn:hover {
+  background: #c94f60;
 }
 
 /* Footer */
@@ -104,4 +106,19 @@ footer {
   background-color: rgba(255, 255, 255, 0.6);
   margin-top: 3rem;
   color: #555;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .subtitulo {
+    font-size: 1.2rem;
+  }
+
+  table, th, td {
+    font-size: 0.9rem;
+  }
 }
