@@ -1,14 +1,14 @@
-/* Fondo general con degradado + patrón de diamantes */
+/* Estilos base */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: 
-    linear-gradient(to bottom, #ff7e5f, #feb47b), 
-    url('images/white-diamond-dark.png'); 
-  background-blend-mode: overlay;
+  color: #111;
+  background-image: 
+    linear-gradient(to bottom, #ff7e5f, #feb47b),
+    url('assets/white-diamond-dark.png');
   background-repeat: repeat;
   background-size: auto;
-  color: #111;
+  background-blend-mode: overlay;
 }
 
 /* Contenedor principal */
@@ -27,7 +27,7 @@ header {
 header h1 {
   font-size: 3rem;
   margin: 0;
-  color: #111; /* Título en negro */
+  color: #111;
 }
 
 header p {
@@ -90,4 +90,33 @@ footer {
   text-align: center;
   padding: 2rem 1rem;
   color: #444;
+}
+
+/* 🌙 Modo oscuro */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #f2f2f2;
+    background-image:
+      linear-gradient(to bottom, #2c3e50, #4ca1af),
+      url('assets/white-diamond-dark.png');
+    background-blend-mode: overlay;
+  }
+
+  header h1,
+  header p,
+  .pricing-card p,
+  .project-item a,
+  footer {
+    color: #f2f2f2;
+  }
+
+  .pricing-card {
+    background-color: rgba(30, 30, 30, 0.85);
+    border-color: #555;
+  }
+
+  .project-item {
+    background-color: rgba(40, 40, 40, 0.85);
+    border-left-color: #ffab91;
+  }
 }
