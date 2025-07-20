@@ -1,48 +1,117 @@
+/* Fondo con gradiente cálido vertical y animación */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to bottom, #ffecd2, #fcb69f);
-  background-attachment: fixed;
-  background-size: cover;
-  color: #fff;
+  background-size: 100% 100%;
+  animation: gradientShift 30s ease infinite;
+  color: #111;
 }
 
+@keyframes gradientShift {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 0% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* Fondo animado con diamantes */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.05) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.05) 75%);
+  background-size: 40px 40px;
+  animation: floatDiamonds 60s linear infinite;
+  z-index: 0;
+}
+
+@keyframes floatDiamonds {
+  0% { background-position: 0 0; }
+  100% { background-position: 160px 160px; }
+}
+
+/* Contenedor principal */
+.container {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado */
 header {
-  background-color: rgba(0, 0, 0, 0.3);
-  color: #000;
-  padding: 3rem 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
+header h1 {
+  font-size: 2.5rem;
+  color: #111;
 }
 
-h2 {
-  margin-top: 2rem;
-  color: #000;
-}
-
-p, ul {
-  font-size: 1.1rem;
+header p {
+  font-size: 1.2rem;
   color: #333;
 }
 
+/* Secciones */
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  border-bottom: 2px solid #fcb69f;
+  padding-bottom: 0.5rem;
+  color: #222;
+}
+
 ul {
-  list-style-type: disc;
-  margin-left: 1.5rem;
+  list-style: none;
+  padding-left: 0;
 }
 
-main {
-  background: rgba(255, 255, 255, 0.75);
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
-  backdrop-filter: blur(5px);
+ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+  color: #333;
 }
 
+/* Tabla de precios */
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.pricing-table th,
+.pricing-table td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  text-align: center;
+  background-color: #fff9f5;
+  color: #222;
+}
+
+.pricing-table th {
+  background-color: #ffe3d3;
+  font-weight: bold;
+}
+
+/* Footer */
 footer {
-  color: #000;
-  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 2rem;
 }
