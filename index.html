@@ -2,222 +2,71 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Elena Guardia – Desarrolladora Web</title>
-  <style>
-    /* 🌈 Fondo degradado vertical */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #1a1a40, #3c1f5b, #5a2d91);
-      color: #ffffff;
-      min-height: 100vh;
-      overflow-x: hidden;
-      position: relative;
-    }
-
-    /* 🧩 Diamantes animados */
-    .diamond {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background: rgba(255, 255, 255, 0.08);
-      transform: rotate(45deg);
-      animation: float 15s infinite linear;
-      border-radius: 2px;
-    }
-
-    .diamond:nth-child(1) {
-      top: 10%;
-      left: 5%;
-      animation-delay: 0s;
-    }
-
-    .diamond:nth-child(2) {
-      top: 30%;
-      left: 20%;
-      animation-delay: 3s;
-    }
-
-    .diamond:nth-child(3) {
-      top: 60%;
-      left: 15%;
-      animation-delay: 6s;
-    }
-
-    .diamond:nth-child(4) {
-      top: 80%;
-      left: 40%;
-      animation-delay: 1s;
-    }
-
-    .diamond:nth-child(5) {
-      top: 50%;
-      left: 70%;
-      animation-delay: 5s;
-    }
-
-    @keyframes float {
-      0% {
-        transform: translateY(0) rotate(45deg);
-        opacity: 0.3;
-      }
-      50% {
-        opacity: 0.7;
-      }
-      100% {
-        transform: translateY(-100vh) rotate(45deg);
-        opacity: 0.1;
-      }
-    }
-
-    /* 📦 Contenedor principal */
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem;
-      position: relative;
-      z-index: 2;
-    }
-
-    h1 {
-      font-size: 3rem;
-      text-align: center;
-      margin-bottom: 0.2rem;
-      color: #f5f5f5;
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin-top: 2rem;
-      color: #ffd166;
-      text-shadow: 0 0 5px rgba(255,255,255,0.2);
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
-      margin-top: 1rem;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    ul li::before {
-      content: "• ";
-      color: #ffd166;
-    }
-
-    a {
-      color: #90e0ef;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      background-color: rgba(0,0,0,0.3);
-      color: #ccc;
-      margin-top: 3rem;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2.2rem;
-      }
-      h2 {
-        font-size: 1.5rem;
-      }
-      .card {
-        padding: 1rem;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elena Guardia | FullStack Junior</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <meta name="description" content="Desarrolladora web FullStack Junior especializada en proyectos accesibles, funcionales y modernos." />
 </head>
 <body>
+  <header>
+    <h1>Elena Guardia</h1>
+    <p class="subtitulo">Desarrolladora Web FullStack Junior</p>
+  </header>
 
-  <!-- 💠 Diamonds decorativos -->
-  <div class="diamond"></div>
-  <div class="diamond"></div>
-  <div class="diamond"></div>
-  <div class="diamond"></div>
-  <div class="diamond"></div>
-
-  <!-- 🧭 Contenido principal -->
-  <div class="container">
-    <header>
-      <h1>Elena Guardia</h1>
-      <p style="text-align: center; font-size: 1.2rem;">Desarrolladora Web Freelance</p>
-    </header>
-
-    <!-- 🛠 Servicios -->
-    <section>
-      <h2>Servicios</h2>
-      <div class="card">
-        <ul>
-          <li>Diseño y desarrollo de sitios web responsive</li>
-          <li>Revisión y mejora de webs ya existentes</li>
-          <li>Landing pages, portfolios, blogs, tiendas y más</li>
-          <li>Optimización SEO básica</li>
-          <li>Mantenimiento web y asesoramiento</li>
-        </ul>
-      </div>
+  <main>
+    <section class="presentacion">
+      <h2>Sobre mí</h2>
+      <p>Soy una desarrolladora web apasionada por la creación de soluciones digitales funcionales, accesibles y con un diseño cuidado. Trabajo tanto en frontend como backend, adaptándome a las necesidades de cada cliente. Mi objetivo es que cada proyecto tenga una identidad propia y sea fácil de usar.</p>
     </section>
 
-    <!-- 💼 Portfolio -->
-    <section>
-      <h2>Portfolio</h2>
-      <div class="card">
-        <p>Consulta algunos de mis proyectos en GitHub:</p>
-        <ul>
-          <li><a href="https://github.com/tuusuario/proyecto1" target="_blank">Página de cafetería</a></li>
-          <li><a href="https://github.com/tuusuario/proyecto2" target="_blank">Landing para escuela de danza</a></li>
-          <li><a href="https://github.com/tuusuario/proyecto3" target="_blank">Portfolio interactivo personal</a></li>
-        </ul>
-      </div>
+    <section class="proyectos">
+      <h2>Proyectos recientes</h2>
+      <ul>
+        <li><strong>Cafetería Aroma</strong>: landing page moderna con Bootstrap, responsive y con formulario de contacto.</li>
+        <li><strong>MindLog</strong>: app de registro emocional y mental con frontend en JavaScript puro y backend en Node.js.</li>
+        <li><strong>Portfolio V1</strong>: portfolio inicial con secciones dinámicas, diseño limpio e interactividad básica.</li>
+      </ul>
     </section>
 
-    <!-- 💰 Tarifas -->
-    <section>
-      <h2>Tarifas</h2>
-      <div class="card">
-        <ul>
-          <li><strong>Landing Page básica:</strong> desde 90€</li>
-          <li><strong>Sitio completo (hasta 4 secciones):</strong> desde 180€</li>
-          <li><strong>Mantenimiento mensual:</strong> desde 25€/mes</li>
-        </ul>
-        <p>Los precios pueden variar según la complejidad del proyecto. ¡Consúltame sin compromiso!</p>
-      </div>
+    <section class="tarifas">
+      <h2>Tarifas orientativas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tipo de proyecto</th>
+            <th>Descripción</th>
+            <th>Precio aproximado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sencillo</td>
+            <td>Landing page básica, sin backend</td>
+            <td>Desde 80€</td>
+          </tr>
+          <tr>
+            <td>Intermedio</td>
+            <td>Web con varias secciones, diseño responsive, formulario de contacto</td>
+            <td>Desde 150€</td>
+          </tr>
+          <tr>
+            <td>Avanzado</td>
+            <td>Web dinámica con backend, panel de administración o integraciones</td>
+            <td>Desde 250€</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
-    <!-- 📞 Contacto -->
-    <section>
+    <section class="contacto">
       <h2>Contacto</h2>
-      <div class="card">
-        <p>¿Tienes un proyecto en mente? Escríbeme:</p>
-        <ul>
-          <li><strong>Email:</strong> <a href="mailto:elenaguardia.dev@gmail.com">elenaguardia.dev@gmail.com</a></li>
-          <li><strong>Instagram:</strong> <a href="https://instagram.com/tuusuario" target="_blank">@tuusuario</a></li>
-        </ul>
-      </div>
+      <p>Puedes escribirme a <a href="mailto:elenaguardia.dev@gmail.com">elenaguardia.dev@gmail.com</a> o enviarme un mensaje por <a href="https://www.instagram.com/elenaguardia.dev" target="_blank">Instagram</a>.</p>
     </section>
-  </div>
+  </main>
 
-  <!-- 🧾 Footer -->
   <footer>
-    &copy; 2025 Elena Guardia · Desarrolladora Web · Hecho con 💻 y mucha ilusión
+    <p>© 2025 Elena Guardia | Desarrolladora Web</p>
   </footer>
-
 </body>
 </html>
