@@ -1,97 +1,53 @@
-/* Fondo general con degradado cálido y patrón de diamantes */
 body {
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom, #ffe0b2, #ffb74d, #ff9800, #fb8c00);
-  background-image: url('white-diamond-dark.png');
-  background-size: 150px 150px;
-  background-blend-mode: overlay;
-  color: #111;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
   min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  background: linear-gradient(to bottom, #ff8a00, #e52e71);
+  color: #fff;
 }
 
-/* Encabezado */
-header {
-  text-align: center;
-  padding: 3rem 1rem 1.5rem;
-  color: #111;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 3rem;
-}
-
-.subtitulo {
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-top: 0.5rem;
-}
-
-/* Secciones */
-main {
-  max-width: 900px;
-  margin: auto;
-  padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-section {
-  margin-bottom: 3rem;
-}
-
-h2 {
-  font-size: 1.8rem;
-  color: #e65100;
-  margin-bottom: 1rem;
-}
-
-/* Lista de proyectos */
-ul {
-  padding-left: 1.2rem;
-}
-
-ul li {
-  margin-bottom: 0.5rem;
-}
-
-/* Tabla de tarifas */
-table {
+/* Fondo decorativo con diamantes */
+.background-overlay::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  border-collapse: collapse;
-  background-color: white;
-  border: 1px solid #ccc;
+  height: 100%;
+  background-image:
+    linear-gradient(45deg, rgba(255, 255, 255, 0.07) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255, 255, 255, 0.07) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.07) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.07) 75%);
+  background-size: 40px 40px;
+  z-index: 0;
 }
 
-th, td {
-  padding: 0.8rem;
-  text-align: left;
-  border-bottom: 1px solid #ccc;
-}
-
-th {
-  background-color: #ffe0b2;
-  color: #333;
-}
-
-/* Enlaces */
-a {
-  color: #bf360c;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
+header,
+main,
 footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.9rem;
-  background-color: rgba(255, 255, 255, 0.6);
-  margin-top: 3rem;
-  color: #555;
+  position: relative;
+  z-index: 1;
+}
+
+header {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+h1, h2, h4, h5 {
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+p {
+  color: #f8f9fa;
+}
+
+.card {
+  background: rgba(0,0,0,0.6);
+  border-radius: 1rem;
 }
