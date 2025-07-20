@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://elenaguardiadev.netlify.app/sitemap.xml
