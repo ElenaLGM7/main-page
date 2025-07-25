@@ -7,74 +7,69 @@
   <title>Elena Guardia - Desarrolladora Web FullStack Junior</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <script defer src="main.js"></script>
 </head>
 <body>
   <div class="container">
     <header>
       <h1>Elena Guardia</h1>
       <p>Desarrolladora Web FullStack Junior — diseño, desarrollo y soluciones a medida</p>
+      <a href="#contacto" class="cta-button">Solicita presupuesto sin compromiso</a>
     </header>
 
-    <section>
-      <h2>Servicios y Tarifas</h2>
-      <div class="pricing-table fade-on-scroll">
+    <section id="tarifas">
+      <h2>Planes y Tarifas</h2>
+      <div class="pricing-table">
         <div class="pricing-card">
           <h3>Landing Express</h3>
-          <p>Web de una sola página, diseño personalizado y responsive.<br><strong>Desde 100€</strong></p>
+          <p>Una página sencilla pero efectiva para darte visibilidad online.<br><strong>Desde 100€</strong></p>
         </div>
         <div class="pricing-card">
-          <h3>Presencia Profesional</h3>
-          <p>Secciones múltiples, formularios, animaciones básicas, adaptable a móvil.<br><strong>Desde 180€</strong></p>
+          <h3>Web Profesional</h3>
+          <p>Web completa, secciones personalizadas, formulario y diseño responsive.<br><strong>Desde 250€</strong></p>
         </div>
         <div class="pricing-card">
-          <h3>Web a Medida</h3>
-          <p>Conexión a base de datos, funcionalidades avanzadas, multilenguaje o CMS.<br><strong>Desde 300€</strong></p>
+          <h3>Solución a Medida</h3>
+          <p>Funcionalidades avanzadas, CMS, multilenguaje o integración de bases de datos.<br><strong>Desde 400€</strong></p>
         </div>
-      </div>
-      <div class="cta-container fade-on-scroll">
-        <a href="mailto:elenaguardia.dev@gmail.com" class="cta-button">Solicita presupuesto sin compromiso</a>
       </div>
     </section>
 
-    <section>
+    <section id="proyectos">
       <h2>Proyectos Destacados</h2>
-      <div class="projects fade-on-scroll">
+      <div class="projects">
         <div class="project-item">
           <strong>Cafetería Delicias</strong> — 
           <a href="https://cafeteriadelicias.netlify.app/" target="_blank">Ver sitio</a>
-          <p>Landing page + página de presentación responsive para una cafetería local.</p>
+          <p>Landing page responsive y presentación para una cafetería local.</p>
         </div>
         <div class="project-item">
           <strong>MindLog</strong> — 
           <a href="https://github.com/elenaguardia/mindlog" target="_blank">Repositorio GitHub</a>
-          <p>App de registro emocional con diseño intuitivo y componentes JS.</p>
+          <p>App de registro emocional con diseño intuitivo e integración de IA.</p>
         </div>
         <div class="project-item">
-          <strong>Mi Portfolio</strong> — 
+          <strong>Portfolio</strong> — 
           <a href="https://elenaguardiadev.netlify.app" target="_blank">Ver sitio</a>
-          <p>Web profesional con estilos personalizados, secciones interactivas y presentación de servicios.</p>
+          <p>Web profesional con diseño personalizado y enfoque en conversión.</p>
         </div>
       </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form action="https://formspree.io/f/mvgqarrr" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Tu nombre" required />
+        <input type="email" name="email" placeholder="Tu correo electrónico" required />
+        <textarea name="message" placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
     </section>
 
     <footer>
       <p>&copy; 2025 Elena Guardia — Todos los derechos reservados</p>
     </footer>
   </div>
-
-  <script>
-    // Animación suave de scroll y entrada de elementos
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-
-    document.querySelectorAll('.fade-on-scroll').forEach(el => observer.observe(el));
-  </script>
 </body>
 </html>
+
