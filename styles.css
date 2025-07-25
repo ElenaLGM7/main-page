@@ -1,57 +1,49 @@
-/* Reset y base */
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #111;
-  background-image: 
-    linear-gradient(to bottom, #ff7e5f, #feb47b),
-    url('assets/white-diamond-dark.png');
+  background-image: linear-gradient(to bottom, #ff7e5f, #feb47b), url('assets/white-diamond-dark.png');
   background-repeat: repeat;
   background-size: auto;
   background-blend-mode: overlay;
-  transition: background 0.3s ease;
+  scroll-behavior: smooth;
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   padding: 2rem;
 }
 
 header {
   text-align: center;
-  padding: 4rem 1rem 2rem 1rem;
-  animation: fadeIn 1s ease-in-out;
+  padding: 3rem 1rem;
+  animation: fadeIn 1s ease-in;
 }
 
 header h1 {
   font-size: 3rem;
-  margin: 0;
-  color: #111;
+  margin-bottom: 0.5rem;
 }
 
 header p {
   font-size: 1.25rem;
-  color: #222;
 }
 
-.cta-button {
-  display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #e65100;
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background-color 0.3s;
+.lang-switcher {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 
-.cta-button:hover {
-  background-color: #bf360c;
+.lang-switcher button {
+  background: transparent;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  color: #333;
 }
 
 section {
@@ -59,43 +51,28 @@ section {
   animation: fadeInUp 0.7s ease;
 }
 
-h2 {
-  text-align: center;
-  color: #333;
+.services {
+  list-style: none;
+  padding: 0;
+  line-height: 1.8;
 }
 
-/* Precios */
 .pricing-table {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
   justify-content: center;
+  gap: 1rem;
 }
 
 .pricing-card {
-  background-color: rgba(255, 255, 255, 0.9);
-  border: 1px solid #ccc;
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
   padding: 1.5rem;
-  width: 300px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  min-width: 240px;
+  text-align: center;
 }
 
-.pricing-card:hover {
-  transform: translateY(-5px);
-}
-
-.pricing-card h3 {
-  margin-top: 0;
-  color: #e65100;
-}
-
-.pricing-card p {
-  color: #333;
-}
-
-/* Portfolio */
 .projects {
   display: flex;
   flex-direction: column;
@@ -103,103 +80,75 @@ h2 {
 }
 
 .project-item {
-  background-color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.85);
   padding: 1rem;
+  border-left: 5px solid #ff5722;
   border-radius: 8px;
-  border-left: 5px solid #ff7043;
-  transition: background-color 0.3s;
 }
 
-.project-item:hover {
-  background-color: rgba(255, 255, 255, 0.95);
-}
-
-.project-item a {
-  text-decoration: none;
-  color: #ff5722;
-}
-
-/* Contacto */
-.contact-form {
+form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 500px;
-  margin: 0 auto;
 }
 
-.contact-form input,
-.contact-form textarea {
+input, textarea, button {
+  font-size: 1rem;
   padding: 0.75rem;
   border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
+  border-radius: 8px;
+  width: 100%;
 }
 
-.contact-form button {
-  padding: 0.75rem;
+button[type="submit"] {
   background-color: #e65100;
   color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
+button[type="submit"]:hover {
   background-color: #bf360c;
 }
 
-/* Footer */
 footer {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 2rem 0;
+  font-size: 0.9rem;
   color: #444;
 }
 
-/* Animaciones */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0 }
+  to { opacity: 1 }
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(20px) }
+  to { opacity: 1; transform: translateY(0) }
 }
 
-/* 🌙 Modo oscuro */
+/* Dark Mode */
 @media (prefers-color-scheme: dark) {
   body {
-    color: #f2f2f2;
-    background-image:
-      linear-gradient(to bottom, #2c3e50, #4ca1af),
-      url('assets/white-diamond-dark.png');
-  }
-
-  header h1,
-  header p,
-  .pricing-card p,
-  .project-item a,
-  footer {
+    background-image: linear-gradient(to bottom, #2c3e50, #4ca1af), url('assets/white-diamond-dark.png');
     color: #f2f2f2;
   }
 
-  .pricing-card {
-    background-color: rgba(30, 30, 30, 0.85);
-    border-color: #555;
-  }
-
+  .pricing-card,
   .project-item {
-    background-color: rgba(40, 40, 40, 0.85);
+    background-color: rgba(30, 30, 30, 0.9);
     border-left-color: #ffab91;
   }
 
-  .contact-form input,
-  .contact-form textarea {
-    background-color: #2c2c2c;
+  input, textarea, button {
+    background-color: #222;
     color: #f2f2f2;
-    border: 1px solid #555;
+    border-color: #555;
+  }
+
+  button[type="submit"] {
+    background-color: #ff7043;
   }
 }
