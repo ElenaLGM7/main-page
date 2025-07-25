@@ -3,33 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Elena Guardia — FullStack Developer Junior especializada en soluciones modernas, accesibles y multilingües.">
-  <meta name="google-site-verification" content="pxBjPLLQqk6p2ZsmsXqqOKVHvhvOv79_j6aBe_uacb0" />
-  <title>Elena Guardia — Desarrolladora Web</title>
+  <title>Elena Guardia - Desarrolladora Web FullStack Junior</title>
+  <meta name="description" content="Portfolio de Elena Guardia, desarrolladora web FullStack Junior. Páginas modernas, accesibles y personalizadas." />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" href="favicon.ico" />
   <script defer src="main.js"></script>
   <script defer data-domain="elenaguardiadev.netlify.app" src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"></script>
   <script>
-    window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments); }
+    window.plausible = window.plausible || function() {
+      (window.plausible.q = window.plausible.q || []).push(arguments)
+    }
   </script>
 </head>
 <body>
-  <div class="lang-switcher">
-    <button onclick="setLanguage('es')">ES</button>
-    <button onclick="setLanguage('en')">EN</button>
-    <button onclick="setLanguage('gl')">GL</button>
-  </div>
-
   <div class="container">
     <header>
-      <h1 id="title">Elena Guardia</h1>
-      <p id="intro"></p>
+      <h1>Elena Guardia</h1>
+      <p id="intro">Ayudo a profesionales a destacar con páginas modernas, accesibles y efectivas.</p>
+      <div class="lang-switcher">
+        <button onclick="setLanguage('es')">ES</button>
+        <button onclick="setLanguage('en')">EN</button>
+        <button onclick="setLanguage('gl')">GL</button>
+      </div>
     </header>
 
     <section>
-      <h2 id="services-title"></h2>
-      <ul class="services">
+      <h2 id="services">Servicios</h2>
+      <ul>
         <li id="service1"></li>
         <li id="service2"></li>
         <li id="service3"></li>
@@ -37,51 +37,27 @@
     </section>
 
     <section>
-      <h2 id="rates-title"></h2>
-      <div class="pricing-table">
-        <div class="pricing-card">
-          <p id="rate1"></p>
-        </div>
-        <div class="pricing-card">
-          <p id="rate2"></p>
-        </div>
-        <div class="pricing-card">
-          <p id="rate3"></p>
-        </div>
-      </div>
+      <h2 id="rates">Tarifas</h2>
+      <ul>
+        <li id="rate1"></li>
+        <li id="rate2"></li>
+        <li id="rate3"></li>
+      </ul>
     </section>
 
     <section>
-      <h2>Proyectos</h2>
-      <div class="projects">
-        <div class="project-item">
-          <strong>Cafetería Delicias</strong> — 
-          <a href="https://cafeteriadelicias.netlify.app/" target="_blank">Ver sitio</a>
-        </div>
-        <div class="project-item">
-          <strong>MindLog</strong> — 
-          <a href="https://github.com/ElenaLGM7/MindLog" target="_blank">GitHub</a>
-        </div>
-        <div class="project-item">
-          <strong>Portfolio</strong> — 
-          <a href="https://elenaguardiadev.netlify.app/" target="_blank">Ver sitio</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2 id="contact-title"></h2>
+      <h2 id="contact">Contacto</h2>
       <p id="availability"></p>
-      <form action="https://formspree.io/f/mvgqarrr" method="POST" onsubmit="plausible('form-submitted')">
-        <input type="text" name="name" placeholder="Nombre" required />
-        <input type="email" name="email" placeholder="Correo electrónico" required />
-        <textarea name="message" placeholder="Tu mensaje..." required></textarea>
+      <form action="https://formspree.io/f/mvgqarrr" method="POST">
+        <input type="text" name="name" placeholder="Tu nombre" required />
+        <input type="email" name="email" placeholder="Tu correo" required />
+        <textarea name="message" placeholder="Escribe tu mensaje" required></textarea>
         <button type="submit">Enviar</button>
       </form>
     </section>
 
     <footer>
-      <p id="footer-text"></p>
+      <p id="footer"></p>
     </footer>
   </div>
 </body>
