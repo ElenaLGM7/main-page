@@ -13,20 +13,19 @@ body {
   background-repeat: repeat;
   background-size: auto;
   background-blend-mode: overlay;
-  transition: background 0.5s ease, color 0.3s ease;
+  transition: background 0.6s ease;
 }
 
-/* Contenedor principal */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
 }
 
-/* Header */
 header {
   text-align: center;
   padding: 4rem 1rem 2rem 1rem;
+  animation: fadeIn 1s ease-in-out;
 }
 
 header h1 {
@@ -40,9 +39,31 @@ header p {
   color: #222;
 }
 
-/* Secciones */
 section {
   margin-bottom: 3rem;
+}
+
+/* Animaciones */
+.fade-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Precios */
@@ -54,18 +75,17 @@ section {
 }
 
 .pricing-card {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 1.5rem;
   width: 280px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .pricing-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 .pricing-card h3 {
@@ -77,26 +97,24 @@ section {
   color: #333;
 }
 
-/* CTA */
-.cta {
+/* Llamada a la acción */
+.cta-container {
   text-align: center;
   margin-top: 2rem;
 }
 
-.contact-button {
-  background-color: #ff5722;
+.cta-button {
+  background-color: #e65100;
   color: white;
-  padding: 0.8rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  display: inline-block;
-  margin-top: 1rem;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
-.contact-button:hover {
-  background-color: #e64a19;
+.cta-button:hover {
+  background-color: #bf360c;
 }
 
 /* Portfolio */
@@ -111,11 +129,6 @@ section {
   padding: 1rem;
   border-radius: 8px;
   border-left: 5px solid #ff7043;
-  transition: transform 0.3s ease;
-}
-
-.project-item:hover {
-  transform: translateX(5px);
 }
 
 .project-item a {
@@ -158,12 +171,12 @@ footer {
     border-left-color: #ffab91;
   }
 
-  .contact-button {
-    background-color: #ffa726;
-    color: #000;
+  .cta-button {
+    background-color: #ff8a65;
+    color: black;
   }
 
-  .contact-button:hover {
-    background-color: #ff9800;
+  .cta-button:hover {
+    background-color: #ff7043;
   }
 }
