@@ -17,33 +17,32 @@
 
     <section>
       <h2>Servicios y Tarifas</h2>
-      <div class="pricing-table">
+      <div class="pricing-table fade-on-scroll">
         <div class="pricing-card">
           <h3>Landing Express</h3>
-          <p>Página simple, ideal para presentación rápida o eventos.<br><strong>Desde 120€</strong></p>
+          <p>Web de una sola página, diseño personalizado y responsive.<br><strong>Desde 100€</strong></p>
         </div>
         <div class="pricing-card">
-          <h3>Web Profesional</h3>
-          <p>Secciones personalizadas, responsive, formulario y funcionalidades dinámicas.<br><strong>Desde 220€</strong></p>
+          <h3>Presencia Profesional</h3>
+          <p>Secciones múltiples, formularios, animaciones básicas, adaptable a móvil.<br><strong>Desde 180€</strong></p>
         </div>
         <div class="pricing-card">
           <h3>Web a Medida</h3>
-          <p>Multilenguaje, base de datos, CMS, animaciones o desarrollo avanzado.<br><strong>Desde 350€</strong></p>
+          <p>Conexión a base de datos, funcionalidades avanzadas, multilenguaje o CMS.<br><strong>Desde 300€</strong></p>
         </div>
       </div>
-      <div class="cta">
-        <p>¿Tienes un proyecto en mente? Estoy aquí para ayudarte.</p>
-        <a href="mailto:elenaguardiadev@gmail.com" class="contact-button">Contáctame</a>
+      <div class="cta-container fade-on-scroll">
+        <a href="mailto:elenaguardiadev@gmail.com" class="cta-button">Solicita presupuesto sin compromiso</a>
       </div>
     </section>
 
     <section>
       <h2>Proyectos Destacados</h2>
-      <div class="projects">
+      <div class="projects fade-on-scroll">
         <div class="project-item">
           <strong>Cafetería Delicias</strong> — 
           <a href="https://cafeteriadelicias.netlify.app/" target="_blank">Ver sitio</a>
-          <p>Landing page + presentación responsive para una cafetería local.</p>
+          <p>Landing page + página de presentación responsive para una cafetería local.</p>
         </div>
         <div class="project-item">
           <strong>MindLog</strong> — 
@@ -62,5 +61,20 @@
       <p>&copy; 2025 Elena Guardia — Todos los derechos reservados</p>
     </footer>
   </div>
+
+  <script>
+    // Animación suave de scroll y entrada de elementos
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.fade-on-scroll').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
