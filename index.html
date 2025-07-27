@@ -3,62 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elena Guardia - Desarrolladora Web FullStack Junior</title>
-  <meta name="description" content="Portfolio de Elena Guardia, desarrolladora web FullStack Junior. Páginas modernas, accesibles y personalizadas." />
+  <title>Elena Guardia – Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="favicon.ico" />
   <script defer src="main.js"></script>
-  <script defer data-domain="elenaguardiadev.netlify.app" src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"></script>
-  <script>
-    window.plausible = window.plausible || function() {
-      (window.plausible.q = window.plausible.q || []).push(arguments)
-    }
-  </script>
+  <script defer src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js" data-domain="elenaguardiadev.netlify.app"></script>
+  <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments); };</script>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Elena Guardia</h1>
-      <p id="intro">Ayudo a profesionales a destacar con páginas modernas, accesibles y efectivas.</p>
-      <div class="lang-switcher">
-        <button onclick="setLanguage('es')">ES</button>
-        <button onclick="setLanguage('en')">EN</button>
-        <button onclick="setLanguage('gl')">GL</button>
-      </div>
-    </header>
+  <header>
+    <h1 id="title">Desarrolladora Web FullStack Junior</h1>
+    <p id="intro">Ayudo a profesionales a destacar con páginas modernas, accesibles y efectivas.</p>
+  </header>
 
-    <section>
-      <h2 id="services">Servicios</h2>
-      <ul>
-        <li id="service1"></li>
-        <li id="service2"></li>
-        <li id="service3"></li>
-      </ul>
-    </section>
+  <section id="services">
+    <h2 id="services-title">Servicios</h2>
+    <ul>
+      <li id="service1">Diseño y desarrollo web responsive</li>
+      <li id="service2">Optimización de rendimiento</li>
+      <li id="service3">Páginas accesibles y modernas</li>
+    </ul>
+  </section>
 
-    <section>
-      <h2 id="rates">Tarifas</h2>
-      <ul>
-        <li id="rate1"></li>
-        <li id="rate2"></li>
-        <li id="rate3"></li>
-      </ul>
-    </section>
+  <section id="rates">
+    <h2 id="rates-title">Tarifas</h2>
+    <ul>
+      <li id="rate1">Landing page: desde 100 €</li>
+      <li id="rate2b">Proyecto intermedio: desde 150 €</li>
+      <li id="rate2">Web completa: desde 250 €</li>
+      <li id="rate3">Mantenimiento: desde 25 €/mes</li>
+    </ul>
+  </section>
 
-    <section>
-      <h2 id="contact">Contacto</h2>
-      <p id="availability"></p>
-      <form action="https://formspree.io/f/mvgqarrr" method="POST">
-        <input type="text" name="name" placeholder="Tu nombre" required />
-        <input type="email" name="email" placeholder="Tu correo" required />
-        <textarea name="message" placeholder="Escribe tu mensaje" required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
+  <section id="contact">
+    <h2 id="contact-title">Contacto</h2>
+    <p id="availability">Disponible para proyectos freelance</p>
+    <form action="https://formspree.io/f/mvgqarrr" method="POST">
+      <input type="text" name="name" placeholder="Tu nombre" required />
+      <input type="email" name="email" placeholder="Tu email" required />
+      <textarea name="message" placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
 
-    <footer>
-      <p id="footer"></p>
-    </footer>
-  </div>
+  <footer>
+    <p id="footer">© 2025 Elena Guardia. Todos los derechos reservados.</p>
+    <div class="lang-switcher">
+      <button data-lang="es">ES</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="gl">GL</button>
+    </div>
+  </footer>
 </body>
 </html>
