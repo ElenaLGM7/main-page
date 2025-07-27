@@ -1,6 +1,6 @@
 {
   "es": {
-    "title": "Desarrolladora Web Frontend",
+    "title": "Desarrolladora Web FUllStack Junior",
     "intro": "Ayudo a profesionales a destacar con páginas modernas, accesibles y efectivas.",
     "services": "Servicios",
     "service1": "Diseño y desarrollo web responsive",
@@ -8,6 +8,7 @@
     "service3": "Páginas accesibles y modernas",
     "rates": "Tarifas",
     "rate1": "Landing page: desde 100 €",
+    "rate2b": "Proyecto intermedio: desde 150 €",
     "rate2": "Web completa: desde 250 €",
     "rate3": "Mantenimiento: desde 25 €/mes",
     "contact": "Contacto",
@@ -15,7 +16,7 @@
     "footer": "© 2025 Elena Guardia. Todos los derechos reservados."
   },
   "en": {
-    "title": "Frontend Web Developer",
+    "title": "FullStack Web Developer Junior",
     "intro": "I help professionals stand out with modern, accessible and effective websites.",
     "services": "Services",
     "service1": "Responsive web design & development",
@@ -23,6 +24,7 @@
     "service3": "Accessible and modern websites",
     "rates": "Rates",
     "rate1": "Landing page: from €100",
+    "rate2b": "Intermediate project: from €150",
     "rate2": "Full website: from €250",
     "rate3": "Maintenance: from €25/month",
     "contact": "Contact",
@@ -30,7 +32,7 @@
     "footer": "© 2025 Elena Guardia. All rights reserved."
   },
   "gl": {
-    "title": "Desenvolvedora Web Frontend",
+    "title": "Desenvolvedora Web FullStack Junior",
     "intro": "Axudo a profesionais a destacar con páxinas modernas, accesibles e efectivas.",
     "services": "Servizos",
     "service1": "Deseño e desenvolvemento web responsive",
@@ -38,6 +40,7 @@
     "service3": "Páxinas accesibles e modernas",
     "rates": "Tarifas",
     "rate1": "Landing page: dende 100 €",
+    "rate2b": "Proxecto intermedio: dende 150 €",
     "rate2": "Web completa: dende 250 €",
     "rate3": "Mantemento: dende 25 €/mes",
     "contact": "Contacto",
