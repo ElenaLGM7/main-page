@@ -1,20 +1,22 @@
+/* Fondo general con degradado azul */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background: #f9f9f9;
-  color: #333;
+  font-family: Arial, sans-serif;
+  color: #e65100; /* naranja oscuro para texto principal */
   line-height: 1.6;
+  background: linear-gradient(to bottom, #2c3e50, #4ca1af);
 }
 
+/* Contenedores y estructura */
 header, section, footer {
   padding: 2rem;
   max-width: 800px;
   margin: auto;
 }
 
+/* Títulos en naranja oscuro */
 h1, h2 {
-  color: #004080;
+  color: #e65100;
 }
 
 ul {
@@ -25,9 +27,10 @@ ul {
 ul li {
   margin-bottom: 0.75rem;
   padding: 0.75rem;
-  background: #ffffff;
-  border-left: 5px solid #007acc;
+  background: #ffffffcc; /* fondo blanco translúcido para legibilidad */
+  border-left: 5px solid #e65100;
   border-radius: 4px;
+  color: #333;
 }
 
 form {
@@ -41,10 +44,12 @@ input, textarea {
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+  background: #fff;
+  color: #333;
 }
 
 button[type="submit"] {
-  background: #007acc;
+  background: #e65100;
   color: #fff;
   border: none;
   padding: 0.75rem;
@@ -54,29 +59,81 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background: #005f99;
+  background: #b43e00;
 }
 
 footer {
   text-align: center;
   margin-top: 3rem;
   font-size: 0.9rem;
+  color: #f0f0f0;
 }
 
 .lang-switcher {
   margin-top: 1rem;
+  text-align: center;
 }
 
 .lang-switcher button {
   margin: 0 0.5rem;
   padding: 0.3rem 0.6rem;
   font-size: 0.9rem;
-  background: #eee;
-  border: 1px solid #ccc;
+  background: #f5f5f5;
+  border: 1px solid #e65100;
   border-radius: 3px;
   cursor: pointer;
+  color: #e65100;
+  font-weight: bold;
 }
 
 .lang-switcher button:hover {
-  background: #ddd;
+  background: #e65100;
+  color: #fff;
+}
+
+/* 🌙 Modo oscuro */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #ffa040; /* naranja claro para modo oscuro */
+    background: linear-gradient(to bottom, #0b1e2d, #185a9d);
+  }
+
+  h1, h2 {
+    color: #ffa040;
+  }
+
+  ul li {
+    background: #222222cc;
+    border-left-color: #ffa040;
+    color: #eee;
+  }
+
+  input, textarea {
+    background: #333;
+    color: #eee;
+    border: 1px solid #555;
+  }
+
+  button[type="submit"] {
+    background: #ffa040;
+  }
+
+  button[type="submit"]:hover {
+    background: #cc8400;
+  }
+
+  footer {
+    color: #ccc;
+  }
+
+  .lang-switcher button {
+    background: #444;
+    border: 1px solid #ffa040;
+    color: #ffa040;
+  }
+
+  .lang-switcher button:hover {
+    background: #ffa040;
+    color: #222;
+  }
 }
