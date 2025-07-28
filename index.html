@@ -3,69 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elena Guardia – Portfolio</title>
+  <meta name="description" content="Elena Guardia, Desarrolladora Web FullStack Junior." />
+  <meta name="theme-color" content="#1e293b" />
+  <title>Elena Guardia Dev</title>
   <link rel="stylesheet" href="styles.css" />
-  <script defer src="main.js"></script>
-  <script defer src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js" data-domain="elenaguardiadev.netlify.app"></script>
-  <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments); };</script>
+  <link rel="icon" href="favicon.ico" />
 </head>
 <body>
   <header>
-    <h1 id="title">Desarrolladora Web FullStack Junior</h1>
-    <p id="intro">Ayudo a profesionales a destacar con páginas modernas, accesibles y efectivas.</p>
+    <h1 id="title"></h1>
+    <nav>
+      <button onclick="setLanguage('es')">ES</button>
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('gl')">GL</button>
+    </nav>
   </header>
 
-  <section id="services">
-    <h2 id="services-title">Servicios</h2>
-    <ul>
-      <li id="service1">Diseño y desarrollo web responsive</li>
-      <li id="service2">Optimización de rendimiento</li>
-      <li id="service3">Páginas accesibles y modernas</li>
-    </ul>
-  </section>
+  <main>
+    <section id="about">
+      <h2 id="aboutTitle"></h2>
+      <p id="aboutText"></p>
+    </section>
 
-  <section id="projects">
-    <h2 id="projects-title">Proyectos realizados</h2>
-    <ul>
-      <li>
-        <a href="https://elenalgm7.github.io/cafeteria-landing/" target="_blank" id="project1-title">Landing page para cafetería</a>
-        <p id="project1-desc">Una página sencilla y visual para una cafetería local.</p>
-      </li>
-      <li>
-        <a href="https://elenalgm7.github.io/MindLog/" target="_blank" id="project2-title">MindLog – Diario emocional</a>
-        <p id="project2-desc">Aplicación para registrar y analizar emociones, con IA y diseño seguro.</p>
-      </li>
-    </ul>
-  </section>
+    <section id="projects">
+      <h2 id="projectsTitle"></h2>
+      <div class="project-list">
+        <a href="https://elenalgm7.github.io/cafeteria-landing-page/" target="_blank" class="project">
+          <h3 id="project1Title"></h3>
+          <p id="project1Desc"></p>
+        </a>
+        <a href="https://elenalgm7.github.io/MindLog/" target="_blank" class="project">
+          <h3 id="project2Title"></h3>
+          <p id="project2Desc"></p>
+        </a>
+        <a href="#" class="project disabled">
+          <h3 id="project3Title"></h3>
+          <p id="project3Desc"></p>
+        </a>
+      </div>
+    </section>
 
-  <section id="rates">
-    <h2 id="rates-title">Tarifas</h2>
-    <ul>
-      <li id="rate1">Landing page: desde 100 €</li>
-      <li id="rate2b">Proyecto intermedio: desde 150 €</li>
-      <li id="rate2">Web completa: desde 250 €</li>
-      <li id="rate3">Mantenimiento: desde 25 €/mes</li>
-    </ul>
-  </section>
+    <section id="rates">
+      <h2 id="ratesTitle"></h2>
+      <ul>
+        <li><strong id="rate1"></strong></li>
+        <li><strong id="rate2"></strong></li>
+        <li><strong id="rate2b"></strong></li>
+        <li><strong id="rate3"></strong></li>
+      </ul>
+    </section>
 
-  <section id="contact">
-    <h2 id="contact-title">Contacto</h2>
-    <p id="availability">Disponible para proyectos freelance</p>
-    <form action="https://formspree.io/f/mvgqarrr" method="POST">
-      <input type="text" name="name" placeholder="Tu nombre" required />
-      <input type="email" name="email" placeholder="Tu email" required />
-      <textarea name="message" placeholder="Tu mensaje" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
+    <section id="contact">
+      <h2 id="contactTitle"></h2>
+      <form action="https://formspree.io/f/mvgqarrr" method="POST">
+        <input type="text" name="name" placeholder="Tu nombre" required />
+        <input type="email" name="email" placeholder="Tu email" required />
+        <textarea name="message" placeholder="Tu mensaje" required></textarea>
+        <button type="submit" id="sendBtn"></button>
+      </form>
+    </section>
+  </main>
 
   <footer>
-    <p id="footer">© 2025 Elena Guardia. Todos los derechos reservados.</p>
-    <div class="lang-switcher">
-      <button data-lang="es">ES</button>
-      <button data-lang="en">EN</button>
-      <button data-lang="gl">GL</button>
-    </div>
+    <p>&copy; <span id="footerText"></span></p>
   </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
